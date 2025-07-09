@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="fade-in">Weather App</h1>
+    <div class="search-box fade-in">
+      <input type="text" id="cityInput" placeholder="Enter city name">
+      <button onclick="getWeather()">Search</button>
+    </div>
+  
+    <div class="unit-toggle fade-in" style="  padding-top:20px;">
+      <label class="switch">
+        <input type="checkbox" id="unitToggle" onchange="toggleUnit()">
+        <span class="slider"></span>
+        
+      </label>
+      <span id="toggleLabel"></span>
+    </div>
+    
+    <div class="weather-box fade-in" id="weatherBox">
+      <h2 id="cityName"></h2>
+      <img id="weatherIcon" src="weathericon.png" alt="Weather Icon"/>
+      <p id="temperature"></p>
+      <p id="description"></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+  <!-- <div class="unit-toggle fade-in">
+      <label>
+        <input type="checkbox" id="unitToggle" onchange="toggleUnit()"> Show in °F
+      </label>
+    </div> -->

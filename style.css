@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  padding-left: 21px;
+  padding-right: 21px;
+  padding-top: 25px;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #67b26f, #4ca2cd);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 4rem;
+  backdrop-filter: blur(10px);
+  text-align: center;
+  color: white;
+  animation: pop-in 0.6s ease-out;
+  box-shadow: 1px 0px 32px 2px rgba(31, 38, 135, 0.37);
+
+}
+
+.search-box input {
+  padding: 0.5rem;
+  border-radius: 50px;
+  border: none;
+  width: 60%;
+}
+
+.search-box button {
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+  border: none;
+  border-radius: 65px;
+  background-color: #4ca2cd;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-box button:hover {
+  background-color: #357ba6;
+}
+
+.weather-box {
+  margin-top: 1rem;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Switch Container */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+/* Hide default checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* Checked state */
+.switch input:checked+.slider {
+  background-color: #4CAF50;
+}
+
+.switch input:checked+.slider::before {
+  transform: translateX(30px);
+}
+
+/* .unit-toggle {
+    margin-top: 1rem;
+  } */
+
+img#weatherIcon {
+  width: 100px;
+  height: 100px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes pop-in {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
